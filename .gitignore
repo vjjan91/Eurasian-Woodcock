@@ -2,9 +2,20 @@
 .Rhistory
 .Rapp.history
 
+# Ignoring all shapefile files and spatial data
+#*.csv
+*.shp
+*.shx
+*.cpg
+*.prj
+*.dbf
+*.xml
+*.sbn
+*.sbx
+*.gpkg
+
 # Session Data files
 .RData
-.RDataTmp
 
 # User-specific files
 .Ruserdata
@@ -39,11 +50,20 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+#ignore these files
 
-# translation temp files
-po/*~
+# ignore data
+data/spatial/
+data/spatial/Elevation
+data/output/*.tif
 
-# RStudio Connect folder
-rsconnect/
+# ignore the sentinel classification from 2018 (can be accessed online)
+data/spatial/2018-nilgiris/2018.tif
+
+# remove occurence data
+data/*-occurrence-data.csv
+
+.Rproj.user
+
+# allow chelsa list
+!*envidatS3paths.txt
